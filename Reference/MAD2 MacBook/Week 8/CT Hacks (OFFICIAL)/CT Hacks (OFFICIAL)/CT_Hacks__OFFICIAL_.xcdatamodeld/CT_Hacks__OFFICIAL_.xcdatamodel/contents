@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C48a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ModuleGrp" representedClassName="ModuleGrp" syncable="YES" codeGenerationType="class">
+        <attribute name="modGroup" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="moduleGrp" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="moduleGrp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModuleGrp" inverseName="students" inverseEntity="ModuleGrp" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ModuleGrp" positionX="123.3359375" positionY="-20.19921875" width="128" height="73"/>
+        <element name="Student" positionX="-63" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
