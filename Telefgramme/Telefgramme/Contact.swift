@@ -12,10 +12,12 @@ class Contact{
     var firstName:String
     var lastName:String
     var mobileNo:String
+    var nickName:String
     
-    init(firstname:String, lastname:String, mobileno:String) {
+    init(firstname:String, lastname:String, mobileno:String, nickname:String) {
         firstName = firstname
         lastName = lastname
-        mobileNo = mobileno  
+        mobileNo = mobileno
+        nickName = nickname
     }
 }

@@ -18,6 +18,8 @@ class ShowContactViewController : UITableViewController {
         super.viewDidLoad()
         
         self.tableView.reloadData()
+        self.hideKeyboardWhenTappedAround()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,13 +32,8 @@ class ShowContactViewController : UITableViewController {
     func CountData() -> Int{
         var count:Int = -1
         let controller = ContactController()
-        do{
-            let contacts:[Contact] = controller.retrieveAllContact()
-            count = contacts.count
-        }
-        catch {
-            print("Data Error")
-        }
+        let contacts:[Contact] = controller.retrieveAllContact()
+        count = contacts.count
         return count
     }
     
@@ -98,6 +95,10 @@ class ShowContactViewController : UITableViewController {
             textField.placeholder = "Enter Mobile Number"
             textField.text = contactList[indexPath.row].mobileNo
         }
+        alert.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter nickname"
+            textField.text = contactList[indexPath.row].nickName
+        }
         
         let mobileNo = contactList[indexPath.row].mobileNo
 
@@ -107,11 +108,10 @@ class ShowContactViewController : UITableViewController {
             let textField1 = alert.textFields![0].text as String?
             let textField2 = alert.textFields![1].text as String?
             let textField3 = alert.textFields![2].text as String?
-            
-            let contact = Contact(firstname: textField1!, lastname: textField2!, mobileno: textField3!)
+            let textField4 = alert.textFields![3].text as String?
+
+            let contact = Contact(firstname: textField1!, lastname: textField2!, mobileno: textField3!, nickname: textField4!)
             controller.updateContact(mobileno: mobileNo, newContact: contact)
-            
-            
             
 //            self.appDelegate.contactList[indexPath.row].firstName = textField1!
 //            self.appDelegate.contactList[indexPath.row].lastName = textField2!

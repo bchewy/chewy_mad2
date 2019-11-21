@@ -18,10 +18,12 @@ class ContactController{
         let context = appDelegate.persistentContainer.viewContext
 
         let entity = NSEntityDescription.entity(forEntityName: "CDContact", in: context)!
-        let person = NSManagedObject(entity: entity, insertInto: context)
-        person.setValue(newContact.firstName,forKeyPath:"firstname")
-        person.setValue(newContact.lastName,forKeyPath:"lastname")
-        person.setValue(newContact.mobileNo,forKeyPath:"mobileno")
+        let contact = NSManagedObject(entity: entity, insertInto: context)
+        contact.setValue(newContact.firstName,forKeyPath:"firstname")
+        contact.setValue(newContact.lastName,forKeyPath:"lastname")
+        contact.setValue(newContact.mobileNo,forKeyPath:"mobileno")
+        contact.setValue(newContact.nickName,forKeyPath:"nickname")
+
         
         do{
             try context.save()
@@ -89,8 +91,10 @@ class ContactController{
                 let firstname = c.value(forKey: "firstname") as? String
                 let lastname = c.value(forKey: "lastname") as? String
                 let mobileno = c.value(forKey: "mobileno") as? String
-                contactList.append(Contact(firstname: firstname!, lastname: lastname!, mobileno: mobileno!))
-                print("\(firstname!) \(lastname!), \(mobileno!)")
+                let nickname = c.value(forKey: "nickname") as? String
+
+                contactList.append(Contact(firstname: firstname!, lastname: lastname!, mobileno: mobileno!, nickname: nickname!))
+                print("\(firstname!) \(lastname!), \(mobileno!) \(nickname!)")
             }
         } catch let error as NSError {
             print ("Could not fetch. \(error), \(error.userInfo)")

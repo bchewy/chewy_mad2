@@ -20,6 +20,7 @@
 		2044174F23866A2D00BA0CCE /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044174E23866A2D00BA0CCE /* FriendController.swift */; };
 		2044175123866D2700BA0CCE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044175023866D2700BA0CCE /* Friend.swift */; };
 		2044175523866DEE00BA0CCE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044175423866DEE00BA0CCE /* Message.swift */; };
+		204417592386ED2500BA0CCE /* FriendMessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204417582386ED2500BA0CCE /* FriendMessagesController.swift */; };
 		20980C5723731F0F003BDE53 /* ShowContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20980C5623731F0F003BDE53 /* ShowContactViewController.swift */; };
 		20F20CB12385CE24007CFAD4 /* Telefgramme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20F20CAF2385CE24007CFAD4 /* Telefgramme.xcdatamodeld */; };
 		20F20CB32385CF05007CFAD4 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F20CB22385CF05007CFAD4 /* ContactController.swift */; };
@@ -41,6 +42,7 @@
 		2044174E23866A2D00BA0CCE /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
 		2044175023866D2700BA0CCE /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		2044175423866DEE00BA0CCE /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		204417582386ED2500BA0CCE /* FriendMessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendMessagesController.swift; sourceTree = "<group>"; };
 		20980C5623731F0F003BDE53 /* ShowContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactViewController.swift; sourceTree = "<group>"; };
 		20F20CB02385CE24007CFAD4 /* Telefgramme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Telefgramme.xcdatamodel; sourceTree = "<group>"; };
 		20F20CB22385CF05007CFAD4 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				20F20CAF2385CE24007CFAD4 /* Telefgramme.xcdatamodeld */,
 				20F20CB22385CF05007CFAD4 /* ContactController.swift */,
 				2044174E23866A2D00BA0CCE /* FriendController.swift */,
+				204417582386ED2500BA0CCE /* FriendMessagesController.swift */,
 			);
 			path = Telefgramme;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				2044174F23866A2D00BA0CCE /* FriendController.swift in Sources */,
 				20405E1A2371539C002E5A30 /* MyTableViewController.swift in Sources */,
 				2044175523866DEE00BA0CCE /* Message.swift in Sources */,
+				204417592386ED2500BA0CCE /* FriendMessagesController.swift in Sources */,
 				20F20CB32385CF05007CFAD4 /* ContactController.swift in Sources */,
 				2044175123866D2700BA0CCE /* Friend.swift in Sources */,
 			);
