@@ -17,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        /*
         contactList = [Contact(firstname: "Apple", lastname: "Seed", mobileno: "91234567"),
         Contact(firstname: "Daniel", lastname: "Dharshan", mobileno: "93842352"),
         Contact(firstname: "Jiet", lastname: "Ng", mobileno: "91343245")]
+        */
         
         return true
     }

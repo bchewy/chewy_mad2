@@ -17,8 +17,10 @@
 		20405E1C23715838002E5A30 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20405E1B23715838002E5A30 /* Content.storyboard */; };
 		20405E1E23715A1B002E5A30 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20405E1D23715A1B002E5A30 /* AddContactViewController.swift */; };
 		20405E2023715CC3002E5A30 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20405E1F23715CC3002E5A30 /* Contact.swift */; };
+		2044174F23866A2D00BA0CCE /* FriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044174E23866A2D00BA0CCE /* FriendController.swift */; };
 		20980C5723731F0F003BDE53 /* ShowContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20980C5623731F0F003BDE53 /* ShowContactViewController.swift */; };
 		20F20CB12385CE24007CFAD4 /* Telefgramme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20F20CAF2385CE24007CFAD4 /* Telefgramme.xcdatamodeld */; };
+		20F20CB32385CF05007CFAD4 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F20CB22385CF05007CFAD4 /* ContactController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +36,10 @@
 		20405E1B23715838002E5A30 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		20405E1D23715A1B002E5A30 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		20405E1F23715CC3002E5A30 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		2044174E23866A2D00BA0CCE /* FriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendController.swift; sourceTree = "<group>"; };
 		20980C5623731F0F003BDE53 /* ShowContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactViewController.swift; sourceTree = "<group>"; };
 		20F20CB02385CE24007CFAD4 /* Telefgramme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Telefgramme.xcdatamodel; sourceTree = "<group>"; };
+		20F20CB22385CF05007CFAD4 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				20405E1D23715A1B002E5A30 /* AddContactViewController.swift */,
 				20980C5623731F0F003BDE53 /* ShowContactViewController.swift */,
 				20F20CAF2385CE24007CFAD4 /* Telefgramme.xcdatamodeld */,
+				20F20CB22385CF05007CFAD4 /* ContactController.swift */,
+				2044174E23866A2D00BA0CCE /* FriendController.swift */,
 			);
 			path = Telefgramme;
 			sourceTree = "<group>";
@@ -164,7 +170,9 @@
 				20405E0A23715218002E5A30 /* ViewController.swift in Sources */,
 				20405E0623715218002E5A30 /* AppDelegate.swift in Sources */,
 				20405E0823715218002E5A30 /* SceneDelegate.swift in Sources */,
+				2044174F23866A2D00BA0CCE /* FriendController.swift in Sources */,
 				20405E1A2371539C002E5A30 /* MyTableViewController.swift in Sources */,
+				20F20CB32385CF05007CFAD4 /* ContactController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

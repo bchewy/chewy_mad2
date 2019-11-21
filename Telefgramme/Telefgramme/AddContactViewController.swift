@@ -24,10 +24,12 @@ class AddContactViewController : UIViewController {
         print(String(appDelegate.contactList.count))
         
         // Create the contact object and append it into the list.
-        let contact:Contact = Contact(firstname: String(firstNameFld.text!), lastname: String(lastNameFld.text!), mobileno: String(mobileFld.text!))
-        appDelegate.contactList.append(contact)
-        
-        print("Contact Created \(contact) just printed.")
+//        appDelegate.contactList.append(contact)
+        let controller = ContactController()
+        controller.AddContact(newContact: Contact(firstname: String(firstNameFld.text!), lastname: String(lastNameFld.text!), mobileno: String(mobileFld.text!)))
+
+//        print("Contact Created \(contact.firstName) \(contact.lastName) \(contact.mobileNo) just printed.")
+
     }
     
     @IBAction func cancelBtn(_ sender: Any) {
