@@ -46,30 +46,63 @@ class ContactController{
 //        print("Failed to fetch data request.")
 //    }
     
+    
+    
+    
+    
+//    func retrieveAllContact()->[Contact]{
+//        var contactList:[Contact] = []
+//
+//        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CDContact")
+//        do {
+//            if let contacts = try context.fetch(fetchRequest) as? [NSManagedObject]{
+//                for c in contacts{
+//                    let firstname = c.value(forKeyPath: "firstname") as? String
+//                    let lastname = c.value(forKeyPath: "lastname") as? String
+//                    let mobileno = c.value(forKeyPath: "mobileno") as? String
+//                    print("\(firstname!),\(lastname!),\(mobileno!)")
+//                    contactList.append(Contact(firstname: firstname!, lastname: lastname!, mobileno: mobileno!))
+//                }
+//            }
+//
+//        }catch {
+//            print("could not fetch data")
+//        }
+//        return contactList
+//    }
+
+    
     func retrieveAllContact()->[Contact]{
-        var contactList:[Contact] = []
-        
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CDContact")
+        var contact:[NSManagedObject] = []
+        var contactList:[Contact] = []
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDContact")
         do {
-            if let contacts = try context.fetch(fetchRequest) as? [NSManagedObject]{
-                for c in contacts{
-                    let firstname = c.value(forKeyPath: "firstname") as? String
-                    let lastname = c.value(forKeyPath: "lastname") as? String
-                    let mobileno = c.value(forKeyPath: "mobileno") as? String
-                    print("\(firstname!),\(lastname!),\(mobileno!)")
-                    contactList.append(Contact(firstname: firstname!, lastname: lastname!, mobileno: mobileno!))
-                }
+            contact = try context.fetch(fetchRequest)
+            
+            for c in contact {
+                let firstname = c.value(forKey: "firstname") as? String
+                let lastname = c.value(forKey: "lastname") as? String
+                let mobileno = c.value(forKey: "mobileno") as? String
+                contactList.append(Contact(firstname: firstname!, lastname: lastname!, mobileno: mobileno!))
+                print("\(firstname!) \(lastname!), \(mobileno!)")
             }
-
-        }catch {
-            print("could not fetch data")
+        } catch let error as NSError {
+            print ("Could not fetch. \(error), \(error.userInfo)")
         }
         return contactList
     }
-
+    
+    
+    
+    
+    
+    
     
     func updateContact(mobileno:String, newContact:Contact){
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
