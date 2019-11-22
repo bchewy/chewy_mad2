@@ -59,7 +59,7 @@ class ShowContactViewController : UITableViewController {
         let contact = contactList[indexPath.row]
         
         cell.textLabel!.text = "\(contact.firstName) \(contact.lastName)"
-        cell.detailTextLabel!.text = "\(contact.mobileNo)"
+        cell.detailTextLabel!.text = "\(contact.mobileNo) : nick: \(contact.nickName)"
         return cell
     }
     
