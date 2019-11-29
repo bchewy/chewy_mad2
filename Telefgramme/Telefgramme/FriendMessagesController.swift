@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// This is the friend messages view controller
 class FriendMessagesController : UIViewController {
     
     @IBOutlet weak var messagesField: UITextField!

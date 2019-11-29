@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view, typically from a nib.
         
         let qrcode = QRCode("Hello World")
@@ -21,5 +22,18 @@ class ViewController: UIViewController {
     }
 
 
+
+
 }
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
