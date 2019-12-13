@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C48a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Character" representedClassName="Character" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="House" representedClassName="House" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pet" inverseName="person" inverseEntity="Pet" syncable="YES"/>
+    </entity>
+    <entity name="Pet" representedClassName="Pet" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="pet" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Character" positionX="-54" positionY="-9" width="128" height="60"/>
+        <element name="House" positionX="141.80859375" positionY="-7.4921875" width="128" height="58"/>
+        <element name="Person" positionX="-85.80078125" positionY="-203.5390625" width="118.28125" height="73"/>
+        <element name="Pet" positionX="171.12109375" positionY="-202.734375" width="128" height="73"/>
+    </elements>
+</model>

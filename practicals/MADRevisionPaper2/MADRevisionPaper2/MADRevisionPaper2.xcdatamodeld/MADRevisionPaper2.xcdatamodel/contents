@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19B2106" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDIngredient" representedClassName="CDIngredient" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="recipes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDRecipe" inverseName="ingredients" inverseEntity="CDRecipe"/>
+    </entity>
+    <entity name="CDRecipe" representedClassName="CDRecipe" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="preparationTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDIngredient" inverseName="recipes" inverseEntity="CDIngredient"/>
+    </entity>
+    <elements>
+        <element name="CDIngredient" positionX="507.71875" positionY="119.73046875" width="128" height="73"/>
+        <element name="CDRecipe" positionX="129.42578125" positionY="-13.5234375" width="128" height="88"/>
+    </elements>
+</model>
