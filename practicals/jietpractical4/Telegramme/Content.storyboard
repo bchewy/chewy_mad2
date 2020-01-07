@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0yo-FS-L13">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0yo-FS-L13">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -116,6 +116,7 @@
                     <connections>
                         <segue destination="TkN-ap-ccb" kind="relationship" relationship="viewControllers" id="uKH-ao-o4x"/>
                         <segue destination="dtY-SG-EY1" kind="relationship" relationship="viewControllers" id="Uc3-1C-f1B"/>
+                        <segue destination="Aeq-mc-8dP" kind="relationship" relationship="viewControllers" id="x7D-Ge-q3O"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1v-sV-JTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,6 +141,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9W-QP-ZEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1287" y="-188"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="scR-fZ-FZs">
+            <objects>
+                <navigationController id="Aeq-mc-8dP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="wNa-n7-B2b"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YlR-we-D31">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="niz-qA-pX0" kind="relationship" relationship="rootViewController" id="vOX-n9-Rra"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyW-UP-Pu7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="1450"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Bww-BB-Gev">
+            <objects>
+                <viewController id="niz-qA-pX0" customClass="MapViewController" customModule="Telegramme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Xk-98-hOk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Yf8-rc-WJt">
+                                <rect key="frame" x="34" y="117" width="347" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="XKt-vS-JcR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e6a-a3-9FD"/>
+                    <connections>
+                        <outlet property="map" destination="Yf8-rc-WJt" id="vB3-zz-qn8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFb-rq-GI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2192.753623188406" y="1449.7767857142856"/>
         </scene>
         <!--Create-->
         <scene sceneID="1c0-ub-aAz">
