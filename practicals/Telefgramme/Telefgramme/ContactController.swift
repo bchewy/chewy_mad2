@@ -93,6 +93,7 @@ class ContactController{
                 let mobileno = c.value(forKey: "mobileno") as? String
                 let nickname = c.value(forKey: "nickname") as? String
 
+                
                 contactList.append(Contact(firstname: firstname!, lastname: lastname!, mobileno: mobileno!, nickname: nickname!))
                 print("\(firstname!) \(lastname!), \(mobileno!) \(nickname!)")
             }
